@@ -1,0 +1,6 @@
+.card-container {
+  width: 62%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

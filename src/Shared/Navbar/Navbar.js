@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div>
       <section className="">
-        <nav class="navbar navbar-expand-lg p-3">
+        <nav class="navbar navbar-expand-lg p-3 ">
           <div class="container">
             <Link class="navbar-brand" to="/">
               <img
@@ -31,7 +31,7 @@ const Navbar = () => {
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav m-auto mb-2 ms-sm-5 mt-sm-3  mb-lg-0">
                 <li class="nav-item">
-                  <Link class="nav-link me-5" aria-current="page" to="/home">
+                  <Link class="nav-link me-5" aria-current="page" to="/favourite">
                     Favourites
                   </Link>
                 </li>
@@ -66,7 +66,7 @@ const Navbar = () => {
               </ul>
             </div>
             <div>
-          <Link className="btn btn-light">
+          <Link className="btn btn-light me-4">
             <span className="me-3">
               <FcGoogle style={{height:"25px", width:"25px"}}/>
             </span>

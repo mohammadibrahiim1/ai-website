@@ -1,0 +1,25 @@
+.favourite-heading {
+  text-align: left;
+}
+.favourite-heading h2 {
+  text-align: left;
+  font-size: 2.024rem;
+  font-weight: 400;
+  padding-top: 20px;
+}
+.favourite-heading p {
+ color: gray;
+ text-transform: capitalize;
+ line-height: 1.5;
+}
+
+.Login-heading h5{
+   text-transform: capitalize;
+   font-size: 1.25rem;
+   font-weight: 400;
+   line-height: 1.6;
+   margin-top: 120px;
+}
+.login-button{
+    padding: 10px 100px;
+}
