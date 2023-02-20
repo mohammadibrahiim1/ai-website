@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { ProductContext } from '../../Context/Context';
 import './AiProduct.css'
 
-const AiProduct = ({ai}) => {
+const AiProduct = ({ai,}) => {
+  // const { aiData} = useContext(ProductContext);
+  // console.log(aiData);
     return (
         <div>
+
+
   <div class="card mt-5" style={{width:"23rem"}}>
   <img src={ai.picture} class="card-img-top" alt="..."/>
   <div class="card-body">

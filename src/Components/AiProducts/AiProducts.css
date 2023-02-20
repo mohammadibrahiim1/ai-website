@@ -4,3 +4,39 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+
+.filter-section{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.filter{
+  position: relative;
+  right: 25%;
+}
+.sort{
+  position: relative;
+  left: 8%;
+}
+
+/* .projects-filter-nav {
+  width: 50%;
+  margin: 0 auto;
+} */
+.filter-button {
+  border: 1px solid gainsboro;
+  border-radius: 15px;
+  font-family: monospace;
+  font-size: 15px;
+  color: gainsboro;
+  padding: 3px 15px;
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: #282c33;
+}
+.filter-button:hover {
+  border: 1px solid palegoldenrod;
+  color: palegoldenrod;
+}
