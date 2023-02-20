@@ -20,6 +20,11 @@
   right: 95%;
 }
 
+.modal-title {
+  font-size: 13px;
+  color: gray;
+}
+
 /* .projects-filter-nav {
   width: 50%;
   margin: 0 auto;
@@ -38,4 +43,13 @@
 .filter-button:hover {
   border: 1px solid palegoldenrod;
   background-color: rgb(245, 242, 242);
+}
+
+.pricing-checkbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+.label {
+  font-size: 17px;
 }
