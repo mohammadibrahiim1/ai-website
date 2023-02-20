@@ -6,7 +6,10 @@ import AiProduct from "../AiProduct/AiProduct";
 import "./AiProducts.css";
 // import { data } from "./aiProductsData";
 import { HiFilter } from "react-icons/hi";
-import { FaSortDown } from "react-icons/fa";
+import { SlBadge } from "react-icons/sl";
+import { MdFiberNew } from "react-icons/md";
+// import { FaSortDown } from "react-icons/fa"; 
+import { GoVerified } from "react-icons/go";
 import { Link } from "react-router-dom";
 
 const AiProducts = () => {
@@ -90,12 +93,13 @@ const AiProducts = () => {
           </button>
         </div>
         <div className="dropdown">
-            <button className="btn btn-light border-dark sort dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">sort by
+            <div className="btn btn-light border-dark sort dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">sort by
             {/* <FaSortDown className="ms-2 mb-2 text-secondary"/> */}
-            </button>
+            </div>
             <ul class="dropdown-menu">
-            <li><Link class="dropdown-item" href="#">Submit Tool</Link></li>
-            <li><Link class="dropdown-item" href="#">Submit News</Link></li>
+            <li><Link class="dropdown-item" href="#">< GoVerified className="text-primary me-2"/> Verified</Link></li>
+            <li><Link class="dropdown-item" href="#">< MdFiberNew className="text-primary me-2"/> New</Link></li>
+            <li><Link class="dropdown-item" href="#"> < SlBadge className="text-primary me-2"/>Popular</Link></li>
             
           </ul>
         </div>
