@@ -5,20 +5,19 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-
-.filter-section{
+.filter-section {
   width: 80%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.filter{
+.filter {
   position: relative;
-  right: 25%;
+  left: 75%;
 }
-.sort{
+.sort {
   position: relative;
-  left: 8%;
+  right: 95%;
 }
 
 /* .projects-filter-nav {
@@ -29,14 +28,14 @@
   border: 1px solid gainsboro;
   border-radius: 15px;
   font-family: monospace;
-  font-size: 15px;
-  color: gainsboro;
+  font-size: 13px;
+  color: black;
   padding: 3px 15px;
   text-decoration: none;
   margin-right: 15px;
-  background-color: #282c33;
+  background-color: white;
 }
 .filter-button:hover {
   border: 1px solid palegoldenrod;
-  color: palegoldenrod;
+  background-color: rgb(245, 242, 242);
 }

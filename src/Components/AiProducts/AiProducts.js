@@ -7,6 +7,7 @@ import "./AiProducts.css";
 // import { data } from "./aiProductsData";
 import { HiFilter } from "react-icons/hi";
 import { FaSortDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AiProducts = () => {
   
@@ -72,7 +73,7 @@ const AiProducts = () => {
           >
             customer support
           </button>
-          {/* <button
+          <button
             className="filter-button"
             onClick={() => filterItem("audio-editing")}
           >
@@ -86,10 +87,17 @@ const AiProducts = () => {
           </button>
           <button className="filter-button" onClick={displayAllProjducts}>
             allProducts
-          </button> */}
+          </button>
         </div>
-        <div>
-            <button className="btn btn-light border-info sort">sort by<FaSortDown className="ms-2 mb-2 text-secondary"/></button>
+        <div className="dropdown">
+            <button className="btn btn-light border-dark sort dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">sort by
+            {/* <FaSortDown className="ms-2 mb-2 text-secondary"/> */}
+            </button>
+            <ul class="dropdown-menu">
+            <li><Link class="dropdown-item" href="#">Submit Tool</Link></li>
+            <li><Link class="dropdown-item" href="#">Submit News</Link></li>
+            
+          </ul>
         </div>
       </section>
 
