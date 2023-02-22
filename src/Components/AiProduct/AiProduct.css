@@ -1,0 +1,35 @@
+.card-title {
+  font-size: 1.25rem;
+  color: #252424;
+  font-weight: 700;
+}
+.card {
+  border: 1px solid #eaeaea;
+}
+
+.text-decoration:hover {
+  text-decoration: underline;
+  transition: 3s;
+}
+.disabled {
+  font-size: 13px;
+}
+.btn-outline-info:hover {
+  background-color: rgba(194, 193, 193, 0.089);
+  color: #0ea5e9;
+}
+.btn-info {
+  color: white;
+}
+.btn-info:hover {
+  color: white;
+  background-color: #0369a1;
+  border: 1px solid #0369a1;
+}
+
+/* tippy theme customize */
+#my-tooltip[data-theme~="light"]{
+    font-size: .5rem;
+    font-family: monospace;
+    background-color: grey;
+}
