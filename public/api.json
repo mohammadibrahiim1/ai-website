@@ -15,7 +15,7 @@
     "mainImage": {
       "_type": "image",
       "asset": {
-        "_ref": "image-cb14850c361821a3f5d89231709be3a11205e1d7-1347x911-jpg",
+        "_ref": "https://i.ibb.co/z5qLMVq/cb14850c361821a3f5d89231709be3a11205e1d7-1347x911.webp",
         "_type": "reference"
       }
     },
@@ -29,7 +29,7 @@
       "current": "chatgpt"
     },
     "slugIndex": "chatgpt",
-    "startingPrice": "20/mo",
+    "startingPrice": "$20/mo",
     "status": "Published",
     "tagsIndex": ["#productivity", "#search-engine"],
     "toolCategories": [
@@ -103,7 +103,7 @@
     "mainImage": {
       "_type": "image",
       "asset": {
-        "_ref": "image-51fde55567afcd81d357e7ee63e3777a46b0ed81-1680x876-png",
+        "_ref": "https://i.ibb.co/jbn4qwQ/durable.webp",
         "_type": "reference"
       }
     },
@@ -119,7 +119,7 @@
     },
     "slugIndex": "durable-ai",
     "sponsorOfTheDay": false,
-    "startingPrice": "9/mo",
+    "startingPrice": "$9/mo",
     "status": "Published",
     "tagsIndex": ["#finance", "#no-code", "#startup-assistant"],
     "toolCategories": [
@@ -212,7 +212,7 @@
     "mainImage": {
       "_type": "image",
       "asset": {
-        "_ref": "image-4dc642d29507d2e460bbcf47a815af9846729b70-1680x876-png",
+        "_ref": "https://i.ibb.co/GPdckB0/fliki.webp",
         "_type": "reference"
       }
     },
@@ -227,7 +227,7 @@
       "current": "fliki"
     },
     "slugIndex": "fliki",
-    "startingPrice": "8/mo",
+    "startingPrice": "$8/mo",
     "status": "Published",
     "tagsIndex": ["#text-to-speech", "#video-generator"],
     "toolCategories": [
@@ -310,7 +310,7 @@
     "mainImage": {
       "_type": "image",
       "asset": {
-        "_ref": "image-dfb853f3ef5ad7235361c389fcb8e5d4f6d2a270-1920x1080-png",
+        "_ref": "https://i.ibb.co/3zxM6sn/mubert.webp",
         "_type": "reference"
       }
     },
@@ -378,7 +378,7 @@
     "mainImage": {
       "_type": "image",
       "asset": {
-        "_ref": "image-54634a637e050e329af5bd813409247a6312b0da-1765x934-jpg",
+        "_ref": "https://i.ibb.co/r4SV2w5/happycopy.webp",
         "_type": "reference"
       }
     },
@@ -392,7 +392,7 @@
       "current": "hoppycopy"
     },
     "slugIndex": "hoppycopy",
-    "startingPrice": "29/mo.",
+    "startingPrice": "$29/mo.",
     "status": "Published",
     "tagsIndex": ["#email-assistant"],
     "toolCategories": [
@@ -455,7 +455,7 @@
     "mainImage": {
       "_type": "image",
       "asset": {
-        "_ref": "image-d7cbfc8f4ba1e34bf1acb49bd8aa47bc9901eaa8-1680x876-png",
+        "_ref": "https://i.ibb.co/ZLqKR3L/synthesia.webp",
         "_type": "reference"
       }
     },
@@ -470,7 +470,7 @@
       "current": "synthesia"
     },
     "slugIndex": "synthesia",
-    "startingPrice": "30/mo",
+    "startingPrice": "$30/mo",
     "status": "Published",
     "tagsIndex": ["#video-generator"],
     "toolCategories": [
@@ -528,7 +528,7 @@
     "mainImage": {
       "_type": "image",
       "asset": {
-        "_ref": "image-ee18186598a943aa2b347c094ab23cd6b2f8084a-1200x628-jpg",
+        "_ref": "https://i.ibb.co/WGw4W4t/piggy-to.webp",
         "_type": "reference"
       }
     },
@@ -621,7 +621,7 @@
     "mainImage": {
       "_type": "image",
       "asset": {
-        "_ref": "image-07ee9dc39c780f88381b223e632b7c7d35f38684-1722x886-jpg",
+        "_ref": "https://i.ibb.co/QFsK6YQ/pridictai.webp",
         "_type": "reference"
       }
     },
@@ -718,7 +718,7 @@
     "mainImage": {
       "_type": "image",
       "asset": {
-        "_ref": "image-f4dfd7dc734935e005e6e7cc8e884c99af99cd74-1680x876-png",
+        "_ref": "https://i.ibb.co/X4htg8P/adcreative-ai.webp",
         "_type": "reference"
       }
     },
@@ -733,7 +733,7 @@
       "current": "adcreative.ai"
     },
     "slugIndex": "adcreative.ai",
-    "startingPrice": "29/mo",
+    "startingPrice": "$29/mo",
     "status": "Published",
     "tagsIndex": ["#copywriting-assistant", "#social-media-assistant"],
     "toolCategories": [

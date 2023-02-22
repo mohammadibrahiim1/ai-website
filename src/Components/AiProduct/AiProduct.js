@@ -5,10 +5,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { BsBookmarkHeart } from "react-icons/bs";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
-import 'tippy.js/themes/light.css';
-// npm i tippy.js
-// import {  } from "react-icons/fa";
-// import { ProductContext } from '../../Context/Context';
+import "tippy.js/themes/light.css";
 import "./AiProduct.css";
 
 const AiProduct = ({ ai }) => {
@@ -16,29 +13,31 @@ const AiProduct = ({ ai }) => {
     content: "add to favourite",
     arrow: false,
     placement: "bottom",
-    theme:'light-border'
+    theme: "light-border",
   });
   tippy("#my-tooltip", {
     content: "visit the website",
     arrow: false,
     placement: "bottom",
-    theme:"light-border"
+    theme: "light-border",
   });
 
+  const {
+    mainImage,
+    toolName,
+    toolDescription,
+    pricing,
+    tagsIndex,
+    startingPrice,
+  } = ai;
 
-  // const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  // const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-  console.log(ai);
-  const { mainImage, toolName, toolDescription, pricing, tagsIndex } = ai;
-  // const [categoryName]= toolCategories;
-  // const { aiData} = useContext(ProductContext);
-  // console.log(aiData);
   return (
     <div>
       <div class="card shadow mt-5" style={{ width: "22rem" }}>
-        <img src={mainImage.asset._ref} class="card-img-top" alt="..." />
+       <Link to=""> <img src={mainImage.asset._ref} class="card-img-top" alt="..." /></Link>
         <div class="card-body text-start">
           <Link class="card-title">{toolName}</Link>
+          <div class="btn btn-light disabled pricing-tag">{startingPrice}</div>
           <p class="card-text">{toolDescription.slice(0, 100)}...</p>
           <div className="text-info mt-4 mb-4">
             <span class="btn btn-outline-secondary disabled me-4">
@@ -63,7 +62,8 @@ const AiProduct = ({ ai }) => {
             </Link>
           </div>
 
-          <Link id="my-tooltip"
+          <Link
+            id="my-tooltip"
             to=""
             class="btn btn-info me-4 "
             data-bs-toggle="tooltip"

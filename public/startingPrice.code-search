@@ -1,0 +1,50 @@
+# Query: startingPrice
+# ContextLines: 1
+
+11 results - 2 files
+
+public\api.json:
+   31      "slugIndex": "chatgpt",
+   32:     "startingPrice": "$20/mo",
+   33      "status": "Published",
+
+  121      "sponsorOfTheDay": false,
+  122:     "startingPrice": "$9/mo",
+  123      "status": "Published",
+
+  229      "slugIndex": "fliki",
+  230:     "startingPrice": "$8/mo",
+  231      "status": "Published",
+
+  327      "slugIndex": "mubert",
+  328:     "startingPrice": "",
+  329      "status": "Published",
+
+  394      "slugIndex": "hoppycopy",
+  395:     "startingPrice": "$29/mo.",
+  396      "status": "Published",
+
+  472      "slugIndex": "synthesia",
+  473:     "startingPrice": "$30/mo",
+  474      "status": "Published",
+
+  545      "sponsorOfTheDay": false,
+  546:     "startingPrice": "",
+  547      "status": "In Review",
+
+  638      "sponsorOfTheDay": false,
+  639:     "startingPrice": "",
+  640      "status": "Published",
+
+  735      "slugIndex": "adcreative.ai",
+  736:     "startingPrice": "$29/mo",
+  737      "status": "Published",
+
+src\Components\AiProduct\AiProduct.js:
+  30      tagsIndex,
+  31:     startingPrice,
+  32    } = ai;
+
+  39            <Link class="card-title">{toolName}</Link>
+  40:           <div class="btn btn-light disabled pricing-tag">{startingPrice}</div>
+  41            <p class="card-text">{toolDescription.slice(0, 100)}...</p>
