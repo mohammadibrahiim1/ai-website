@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
-
-
-  
-
   return (
     <div>
       <section>
@@ -52,14 +48,11 @@ const Header = () => {
                     </Link>{" "}
                   </div>{" "}
                 </div>{" "}
-              
               </div>{" "}
             </div>{" "}
           </div>{" "}
         </div>
       </section>
-
- 
     </div>
   );
 };

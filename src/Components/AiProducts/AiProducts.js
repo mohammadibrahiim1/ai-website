@@ -6,7 +6,7 @@ import AiProduct from "../AiProduct/AiProduct";
 import "./AiProducts.css";
 // import { data } from "./aiProductsData";
 import { HiFilter } from "react-icons/hi";
-import { FiUnlock,FiDollarSign } from "react-icons/fi";
+import { FiUnlock, FiDollarSign } from "react-icons/fi";
 
 import { SlBadge } from "react-icons/sl";
 import { MdFiberNew } from "react-icons/md";
@@ -28,11 +28,14 @@ const AiProducts = () => {
       });
   }, []);
 
-  const filterItem = (categoryItem) => {
-    const updateItems = allProducts.filter((currentElement) => {
-      return currentElement.category === categoryItem;
-    });
+  const { _id } = allProducts;
 
+  const filterItem = (_id) => {
+    const updateItems = allProducts.filter((currentElement) => {
+      return currentElement._id === _id;
+    });
+ console.log("id")
+    console.log(updateItems);
     setProjects(updateItems);
   };
 
@@ -91,31 +94,60 @@ const AiProducts = () => {
                         style={{ width: "15px", height: "15px" }}
                       />{" "}
                       <FiUnlock className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Free Trial">Free Trial</label>
+                      <label className="label mb-3" htmlFor="Free Trial">
+                        Free Trial
+                      </label>
                     </div>
                     <div>
-                      <input type="checkbox" name="Contact For Pricing" id=""   style={{ width: "15px", height: "15px" }} />{" "} < FiDollarSign className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Contact For Pricing"> 
+                      <input
+                        type="checkbox"
+                        name="Contact For Pricing"
+                        id=""
+                        style={{ width: "15px", height: "15px" }}
+                      />{" "}
+                      <FiDollarSign className="mb-2 ms-2 me-1" />
+                      <label
+                        className="label mb-3"
+                        htmlFor="Contact For Pricing"
+                      >
                         Contact For Pricing
                       </label>
                     </div>
                   </div>
                   <div>
-                  <div>
-                      <input type="checkbox" name="Contact For Pricing" id=""   style={{ width: "15px", height: "15px" }} />{" "} < FiDollarSign className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Freemium"> 
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="Contact For Pricing"
+                        id=""
+                        style={{ width: "15px", height: "15px" }}
+                      />{" "}
+                      <FiDollarSign className="mb-2 ms-2 me-1" />
+                      <label className="label mb-3" htmlFor="Freemium">
                         Freemium
                       </label>
                     </div>
-                  <div>
-                      <input type="checkbox" name="Contact For Pricing" id=""   style={{ width: "15px", height: "15px" }} />{" "} < FiDollarSign className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Paid"> 
-                       Paid
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="Contact For Pricing"
+                        id=""
+                        style={{ width: "15px", height: "15px" }}
+                      />{" "}
+                      <FiDollarSign className="mb-2 ms-2 me-1" />
+                      <label className="label mb-3" htmlFor="Paid">
+                        Paid
                       </label>
                     </div>
-                  <div>
-                      <input type="checkbox" name="Contact For Pricing" id=""   style={{ width: "15px", height: "15px" }} />{" "} < FaTag className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Deals"> 
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="Contact For Pricing"
+                        id=""
+                        style={{ width: "15px", height: "15px" }}
+                      />{" "}
+                      <FaTag className="mb-2 ms-2 me-1" />
+                      <label className="label mb-3" htmlFor="Deals">
                         Deals
                       </label>
                     </div>
@@ -147,31 +179,60 @@ const AiProducts = () => {
                         style={{ width: "15px", height: "15px" }}
                       />{" "}
                       <FiUnlock className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Free Trial">Free Trial</label>
+                      <label className="label mb-3" htmlFor="Free Trial">
+                        Free Trial
+                      </label>
                     </div>
                     <div>
-                      <input type="checkbox" name="Contact For Pricing" id=""   style={{ width: "15px", height: "15px" }} />{" "} < FiDollarSign className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Contact For Pricing"> 
+                      <input
+                        type="checkbox"
+                        name="Contact For Pricing"
+                        id=""
+                        style={{ width: "15px", height: "15px" }}
+                      />{" "}
+                      <FiDollarSign className="mb-2 ms-2 me-1" />
+                      <label
+                        className="label mb-3"
+                        htmlFor="Contact For Pricing"
+                      >
                         Contact For Pricing
                       </label>
                     </div>
                   </div>
                   <div>
-                  <div>
-                      <input type="checkbox" name="Contact For Pricing" id=""   style={{ width: "15px", height: "15px" }} />{" "} < FiDollarSign className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Freemium"> 
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="Contact For Pricing"
+                        id=""
+                        style={{ width: "15px", height: "15px" }}
+                      />{" "}
+                      <FiDollarSign className="mb-2 ms-2 me-1" />
+                      <label className="label mb-3" htmlFor="Freemium">
                         Freemium
                       </label>
                     </div>
-                  <div>
-                      <input type="checkbox" name="Contact For Pricing" id=""   style={{ width: "15px", height: "15px" }} />{" "} < FiDollarSign className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Paid"> 
-                       Paid
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="Contact For Pricing"
+                        id=""
+                        style={{ width: "15px", height: "15px" }}
+                      />{" "}
+                      <FiDollarSign className="mb-2 ms-2 me-1" />
+                      <label className="label mb-3" htmlFor="Paid">
+                        Paid
                       </label>
                     </div>
-                  <div>
-                      <input type="checkbox" name="Contact For Pricing" id=""   style={{ width: "15px", height: "15px" }} />{" "} < FaTag className="mb-2 ms-2 me-1" />
-                      <label className="label mb-3" htmlFor="Deals"> 
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="Contact For Pricing"
+                        id=""
+                        style={{ width: "15px", height: "15px" }}
+                      />{" "}
+                      <FaTag className="mb-2 ms-2 me-1" />
+                      <label className="label mb-3" htmlFor="Deals">
                         Deals
                       </label>
                     </div>
@@ -207,8 +268,8 @@ const AiProducts = () => {
           </button>
         </div>
         <div className="projects-filter-nav mt-2">
-          <button className="filter-button" onClick={() => filterItem("art")}>
-            art
+          <button className="filter-button" onClick={()=>filterItem(_id)}>
+            search-engine
           </button>
 
           <button

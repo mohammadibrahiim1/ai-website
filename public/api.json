@@ -28,7 +28,7 @@
       "_type": "slug",
       "current": "chatgpt"
     },
-    "slugIndex": "chatgpt",
+    "slugIndex": "search-engine",
     "startingPrice": "$20/mo",
     "status": "Published",
     "tagsIndex": ["#productivity", "#search-engine"],

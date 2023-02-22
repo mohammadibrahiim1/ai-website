@@ -57,8 +57,11 @@ const AiProduct = ({ ai }) => {
             <Link to="" className="text-decoration me-4" disabled>
               {tagsIndex[0]}
             </Link>
-            <Link to="" className=" text-decoration" disabled>
+            <Link to="" className=" text-decoration me-4" disabled>
               {tagsIndex[1]}
+            </Link>
+            <Link to="" className=" text-decoration" disabled>
+              {tagsIndex[2]}
             </Link>
           </div>
 
