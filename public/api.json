@@ -28,7 +28,7 @@
       "_type": "slug",
       "current": "chatgpt"
     },
-    "slugIndex": "search-engine",
+    "category": "search-engine",
     "startingPrice": "$20/mo",
     "status": "Published",
     "tagsIndex": ["#productivity", "#search-engine"],
@@ -117,7 +117,7 @@
       "_type": "slug",
       "current": "durable-ai"
     },
-    "slugIndex": "durable-ai",
+    "category": "low-code/no-code",
     "sponsorOfTheDay": false,
     "startingPrice": "$9/mo",
     "status": "Published",
@@ -226,7 +226,7 @@
       "_type": "slug",
       "current": "fliki"
     },
-    "slugIndex": "fliki",
+    "category": "developer-tools",
     "startingPrice": "$8/mo",
     "status": "Published",
     "tagsIndex": ["#text-to-speech", "#video-generator"],
@@ -324,7 +324,7 @@
       "_type": "slug",
       "current": "mubert"
     },
-    "slugIndex": "mubert",
+    "category": "text-to-speach",
     "startingPrice": "",
     "status": "Published",
     "tagsIndex": ["#text-to-speech"],
@@ -391,7 +391,7 @@
       "_type": "slug",
       "current": "hoppycopy"
     },
-    "slugIndex": "hoppycopy",
+    "category": "email-assistant",
     "startingPrice": "$29/mo.",
     "status": "Published",
     "tagsIndex": ["#email-assistant"],
@@ -469,7 +469,7 @@
       "_type": "slug",
       "current": "synthesia"
     },
-    "slugIndex": "synthesia",
+    "category": "video-genarator",
     "startingPrice": "$30/mo",
     "status": "Published",
     "tagsIndex": ["#video-generator"],
@@ -541,7 +541,7 @@
       "_type": "slug",
       "current": "piggy-to"
     },
-    "slugIndex": "piggy-to",
+    "category": "fun-tools",
     "sponsorOfTheDay": false,
     "startingPrice": "",
     "status": "In Review",
@@ -634,7 +634,7 @@
       "_type": "slug",
       "current": "predict-ai"
     },
-    "slugIndex": "predict-ai",
+    "category": "social-media-assistant",
     "sponsorOfTheDay": false,
     "startingPrice": "",
     "status": "Published",
@@ -732,7 +732,7 @@
       "_type": "slug",
       "current": "adcreative.ai"
     },
-    "slugIndex": "adcreative.ai",
+    "category": "copywriting",
     "startingPrice": "$29/mo",
     "status": "Published",
     "tagsIndex": ["#copywriting-assistant", "#social-media-assistant"],
@@ -805,4 +805,5 @@
     "verifiedReason": "Recommended",
     "websiteUrl": "https://free-trial.adcreative.ai/futurepedia"
   }
+
 ]

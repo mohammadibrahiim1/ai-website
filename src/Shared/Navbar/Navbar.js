@@ -9,7 +9,7 @@ const Navbar = () => {
       <section className="">
         <nav class="navbar navbar-expand-lg p-3 ">
           <div class="container">
-            <Link class="navbar-brand" to="/">
+            <Link  class="navbar-brand" to="/">
               <img
                 src="https://i.ibb.co/brKp5RZ/8ca76aec-f167-425d-8892-7ca993131ed7.jpg"
                 alt=""

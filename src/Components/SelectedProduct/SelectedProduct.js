@@ -1,51 +1,58 @@
-// import { Button } from 'bootstrap';
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { BsBookmarkHeart } from "react-icons/bs";
-import tippy from "tippy.js";
-import "tippy.js/dist/tippy.css";
-import "tippy.js/themes/light.css";
-import "./AiProduct.css";
 
-const AiProduct = ({ ai }) => {
-  // console.log(ai);
-  tippy("#mytooltip", {
-    content: "add to favourite",
-    arrow: false,
-    placement: "bottom",
-    theme: "light-border",
-  });
-  tippy("#my-tooltip", {
-    content: "visit the website",
-    arrow: false,
-    placement: "bottom",
-    theme: "light-border",
-  });
+const SelectedProduct = () => {
+    const [categories, setCategories] = useState([]);
 
-  const {
-    mainImage,
-    toolName,
-    toolDescription,
-    pricing,
-    category,
-    startingPrice,
-    
-  } = ai;
- 
+    const selecItem = useLoaderData();
+    console.log(selecItem);
 
-  return (
-    <div>
-   
+    useEffect(() => {
+        fetch("http://localhost:5000/categories")
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            setCategories(data);
+          });
+      }, []);
+    const {
+        mainImage,
+        toolName,
+        toolDescription,
+        pricing,
+        // tagsIndex,
+        startingPrice,
+        category,
+      } = selecItem;
+    return (
+        <div>
 
-     <section className="card-section">
+            <section>
+            <section className="categories-section">
+        <div>{categories.length}</div>
+        {categories.map((category) => (
+          <span className=" btn btn-light">
+            <Link
+              //  onClick={()=>filterItem(category.name)}
+              to={`/category/${category.name}`}
+            >
+              {category.name}
+            </Link>
+          </span>
+        ))}
+      </section>
+            </section>
+           
+     <section className="card-section container m-auto">
      <div class="card shadow mt-5" style={{ width: "22rem" }}>
-        <Link to="">
+        <Link to="/">
           {" "}
           <img src={mainImage.asset._ref} class="card-img-top" alt="..." />
         </Link>
         <div class="card-body text-start">
-          <Link class="card-title" to={`/tool/${category}`}>{toolName}</Link>
+          <Link class="card-title" to='/'>{toolName}</Link>
           <div class="btn btn-light disabled pricing-tag">{startingPrice}</div>
           <p class="card-text">{toolDescription.slice(0, 100)}...</p>
           <div className="text-info mt-4 mb-4">
@@ -64,7 +71,7 @@ const AiProduct = ({ ai }) => {
           </div>
           <div className="mb-4">
             <Link to="" className="text-decoration me-4" disabled>
-              {category}
+              #{category}
             </Link>
             {/* <Link to="" className=" text-decoration me-4" disabled>
               {tagsIndex[1]}
@@ -98,8 +105,8 @@ const AiProduct = ({ ai }) => {
         </div>
       </div>
      </section>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default AiProduct;
+export default SelectedProduct;

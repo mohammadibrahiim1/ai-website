@@ -1,7 +1,8 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 import AiProducts from "../../Components/AiProducts/AiProducts";
 import Header from "../../Components/Header/Header";
-// import { ProductContext } from '../../Context/Context';
 
 const Home = () => {
   return (
