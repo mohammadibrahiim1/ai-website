@@ -1,22 +1,19 @@
-import { createContext, useEffect, useState } from "react";
+import React, { createContext } from 'react';
+import app from '../firebase/firebase.config';
+import { getAuth } from "firebase/auth";
 
-export const ProductContext = createContext({});
+export const AuthContext = createContext();
+const auth= getAuth(app);
 
-export const ProductsProvider = ({ children }) => {
-  const [aiData, setAiData] = useState([]);
+const Context = ({children}) => {
+  
+  
 
-  useEffect(() => {
-    fetch("api.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setAiData(data);
-        // console.log(data);
-      });
-  }, []);
-
-  const info = {
-    aiData,
-  };
-
-  return <ProductContext.Provider value={info}> {children} </ProductContext.Provider>;
+  return (
+    <div>
+      <AuthContext.Provider>{children}</AuthContext.Provider>
+    </div>
+  );
 };
+
+export default Context;
