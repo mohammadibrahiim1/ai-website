@@ -52,7 +52,7 @@ const SelectedProduct = () => {
           <img src={mainImage.asset._ref} class="card-img-top" alt="..." />
         </Link>
         <div class="card-body text-start">
-          <Link class="card-title" to='/'>{toolName}</Link>
+          <Link class="card-title" to={`/tool/${category}`}>{toolName}</Link>
           <div class="btn btn-light disabled pricing-tag">{startingPrice}</div>
           <p class="card-text">{toolDescription.slice(0, 100)}...</p>
           <div className="text-info mt-4 mb-4">
