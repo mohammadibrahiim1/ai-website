@@ -6,19 +6,14 @@ import "./Header.css";
 const Header = () => {
   return (
     <div>
-      <section>
-        <div>
-          {/* <ul>
-            <li></li>
-          </ul> */}
-        </div>
+      <section className="text-center">
         <h1 className="header-title">FUTUREPEDIA</h1>
         <h4 className="text-secondary">
           THE LARGEST AI TOOLS DIRECTORY, UPDATED DAILY
         </h4>
       </section>
 
-      <section>
+      <section className="">
         <div class="search-field mt-4">
           {" "}
           <div class="row d-flex justify-content-center">

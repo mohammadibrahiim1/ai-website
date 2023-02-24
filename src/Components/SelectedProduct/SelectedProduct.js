@@ -30,8 +30,8 @@ const SelectedProduct = () => {
         <div>
 
             <section>
-            <section className="categories-section">
-        <div>{categories.length}</div>
+            <section className="categories-section container">
+        {/* <div>{categories.length}</div> */}
         {categories.map((category) => (
           <span className=" btn btn-light">
             <Link
