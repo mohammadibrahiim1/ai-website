@@ -1,5 +1,7 @@
 .favourite-heading {
   text-align: left;
+  margin-top: 50px;
+  margin-bottom: 200px;
 }
 .favourite-heading h2 {
   text-align: left;
@@ -19,7 +21,10 @@
    font-weight: 400;
    line-height: 1.6;
    margin-top: 120px;
+
 }
+
+
 .login-button{
     padding: 10px 100px;
 }

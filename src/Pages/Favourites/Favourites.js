@@ -14,7 +14,7 @@ const Favourites = () => {
                     </p>
                 </div>
 
-                <div className='Login-heading'>
+                <div className='Login-heading  text-center'>
                     <h5>Please sign up or login to view your favourited AI tools and posts.</h5>
                     <Link className="btn btn-light mt-3 login-button">
             <span className="me-3">
@@ -23,7 +23,7 @@ const Favourites = () => {
             </span>
           SIGN IN WITH GOOGLE
           </Link>
-          <p className='mt-2'>I'll also send a weekly newsletter with new AI tools and <br /> updates.  You can unsubscribe at any time.</p>
+          <p className='mt-3'>I'll also send a weekly newsletter with new AI tools and <br /> updates.  You can unsubscribe at any time.</p>
                 </div>
             </section>
         </div>
