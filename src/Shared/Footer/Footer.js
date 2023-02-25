@@ -6,12 +6,11 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div>
-      <div className="footer container border-top">
+      <div className="footer  border-top">
    
   
-        <div className="column w-25 m-auto ">
-          {/* <h3>Column 1</h3> */}
-          <ul className="text-start ms-4">
+        <div className="column">
+          <ul className="">
             <li>
               <Link to="https://www.futurepedia.io/privacy-policy">
                 privacy policy
@@ -24,9 +23,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="column w-25 m-auto">
+        <div className="column">
           {/* <h3>Column 2</h3> */}
-          <ul className="text-center me-5">
+          <ul className="">
             <li>
               <Link to="">Copyright © 2023 - Futurepedia™</Link>
             </li>
@@ -35,9 +34,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="column w-25 m-auto">
+        <div className="column">
           {/* <h3>Column 3</h3> */}
-          <ul className="text-end">
+          <ul className="">
             <Link
               to="https://www.linkedin.com/company/futurepedia/"
               className="me-4 text-primary-emphasis"
@@ -59,7 +58,7 @@ const Footer = () => {
             </Link>
             <Link
               to="https://discord.gg/jkfjCB9qx6"
-              className="me-4 text-danger-emphasis "
+              className=" text-danger-emphasis "
             >
               <FaDiscord style={{ height: "29px", width: "29px" }} />
             </Link>

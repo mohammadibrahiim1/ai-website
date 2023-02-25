@@ -7,6 +7,7 @@ import Home from "../Pages/Home/Home";
 import Root from "../Root/Root";
 import SignIn from "../Pages/SignIn/SignIn";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
+import Recent from "../Components/Recent/Recent";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ export const router = createBrowserRouter([
       { path: "/favourite", element: <PrivateRoute><Favourites></Favourites></PrivateRoute> },
       { path: "/discover", element: <Discover></Discover> },
       { path: "/signin", element: <SignIn></SignIn> },
+      { path: "/recent", element: <Recent></Recent> },
     ],
   },
 ]);

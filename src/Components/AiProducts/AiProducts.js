@@ -78,7 +78,7 @@ const AiProducts = () => {
 
   
 
-      <div className="card-container">
+      <div className="card-container container"> 
         {allProducts.map((ai) => (
           <AiProduct ai={ai} id={ai.index}></AiProduct>
         ))}

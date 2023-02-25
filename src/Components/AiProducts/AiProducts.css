@@ -54,12 +54,20 @@
   font-size: 17px;
 }
 
-
 @media screen and (max-width: 576px) {
   .card-container {
-    width: 90%;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { FaLinkedin,FaYoutube,FaTwitter,FaDiscord } from "react-icons/fa";
+import { FaLinkedin, FaYoutube, FaTwitter, FaDiscord } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import "./Navbar.css";
 import { AuthContext } from "../../Context/Context";
@@ -275,7 +275,15 @@ const Navbar = () => {
                 style={{ width: "120px", height: "42px" }}
               />
             </Link>
-            
+
+            <div className="ms-5">
+              <img
+                src={user?.photoURL}
+                alt=""
+                className="border rounded-circle ms-5 mt-2"
+                style={{ height: "34px", width: "34px" }}
+              />
+            </div>
             <button
               class="navbar-toggler"
               type="button"
@@ -283,7 +291,6 @@ const Navbar = () => {
               data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar"
             >
-           
               <span class="navbar-toggler-icon"></span>
             </button>
             <div
@@ -401,7 +408,6 @@ const Navbar = () => {
                       </li>
                     </ul>
                   </li>
-              
                 </ul>
                 {/* <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -447,14 +453,16 @@ const Navbar = () => {
                     // </div>
 
                     <div className="">
-                       <Link
-                              class="text-danger-emphasis btn btn-light"
-                              to="#"
-                              onClick={handleSignOut}
-                            >
-                              <span>< FiLogOut className="me-2"/></span>
-                              Log Out
-                            </Link>
+                      <Link
+                        class="text-danger-emphasis btn btn-light"
+                        to="#"
+                        onClick={handleSignOut}
+                      >
+                        <span>
+                          <FiLogOut className="me-2" />
+                        </span>
+                        Log Out
+                      </Link>
                       {/* <div class="nav-item dropdown">
                         <Link
                           class="nav-link me-5 dropdown-toggle"
@@ -515,40 +523,38 @@ const Navbar = () => {
                     </>
                   )}
                 </div>
-     
               </div>
 
               <div className="column w-25 m-auto offcanvas-social-link">
-          {/* <h3>Column 3</h3> */}
-          <ul className="text-end link-container">
-            <Link
-              to="https://www.linkedin.com/company/futurepedia/"
-              className="me-4 text-primary-emphasis"
-            >
-              <FaLinkedin style={{ height: "29px", width: "29px" }} />
-            </Link>
+                {/* <h3>Column 3</h3> */}
+                <ul className="text-end link-container">
+                  <Link
+                    to="https://www.linkedin.com/company/futurepedia/"
+                    className="me-4 text-primary-emphasis"
+                  >
+                    <FaLinkedin style={{ height: "29px", width: "29px" }} />
+                  </Link>
 
-            <Link
-              to="https://www.youtube.com/@futurepediaio"
-              className="me-4 text-danger"
-            >
-              <FaYoutube style={{ height: "29px", width: "29px" }} />
-            </Link>
-            <Link
-              to="https://twitter.com/futurepedia_io"
-              className="me-4 text-info-emphasis"
-            >
-              <FaTwitter style={{ height: "29px", width: "29px" }} />
-            </Link>
-            <Link
-              to="https://discord.gg/jkfjCB9qx6"
-              className="me-4 text-danger-emphasis "
-            >
-              <FaDiscord style={{ height: "29px", width: "29px" }} />
-            </Link>
-          </ul>
-        </div>
-        
+                  <Link
+                    to="https://www.youtube.com/@futurepediaio"
+                    className="me-4 text-danger"
+                  >
+                    <FaYoutube style={{ height: "29px", width: "29px" }} />
+                  </Link>
+                  <Link
+                    to="https://twitter.com/futurepedia_io"
+                    className="me-4 text-info-emphasis"
+                  >
+                    <FaTwitter style={{ height: "29px", width: "29px" }} />
+                  </Link>
+                  <Link
+                    to="https://discord.gg/jkfjCB9qx6"
+                    className="me-4 text-danger-emphasis "
+                  >
+                    <FaDiscord style={{ height: "29px", width: "29px" }} />
+                  </Link>
+                </ul>
+              </div>
             </div>
           </div>
         </nav>
