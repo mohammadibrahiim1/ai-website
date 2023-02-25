@@ -18,6 +18,7 @@ const AiProducts = () => {
   const [allProducts, setAllProducts] = useState([]);
   // const [projects, setProjects] = useState([]);
   // const [categories, setCategories] = useState([]);
+  // const [isChecked, setIsChecked] = useState(false);
 
   const [categories, setCategories] = useState([]);
 
@@ -39,6 +40,13 @@ const AiProducts = () => {
         // setProjects(data);
       });
   }, []);
+
+  // const handleChange = (props) => {
+  //   setIsChecked(!isChecked);
+  //   if (props.onChange) {
+  //     props.onChange(!isChecked);
+  //   }
+  // };
 
   // const {categoryName} = toolCategories;
 
@@ -74,15 +82,25 @@ const AiProducts = () => {
             </Link>
           </span>
         ))}
+
+        {/* <div>
+<div className="slider">
+      <input
+        type="checkbox"
+        id={props.id}
+        checked={isChecked}
+        onChange={handleChange}
+      />
+      <label htmlFor={props.id}></label>
+</div>
+</div> */}
       </section>
 
-  
-
-      <div className="card-container container"> 
+      <div className="card-container container">
         {allProducts.map((ai) => (
           <AiProduct ai={ai} id={ai.index}></AiProduct>
         ))}
-      </div> 
+      </div>
     </div>
   );
 };
