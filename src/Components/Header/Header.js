@@ -8,7 +8,7 @@ const Header = () => {
     <div>
       <section className="text-center">
         <h1 className="header-title">FUTUREPEDIA</h1>
-        <h4 className="text-secondary">
+        <h4 className="text-secondary header-subtitle">
           THE LARGEST AI TOOLS DIRECTORY, UPDATED DAILY
         </h4>
       </section>

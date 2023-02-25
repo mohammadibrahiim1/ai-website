@@ -82,7 +82,7 @@ const AiProducts = () => {
         {allProducts.map((ai) => (
           <AiProduct ai={ai} id={ai.index}></AiProduct>
         ))}
-      </div>
+      </div> 
     </div>
   );
 };

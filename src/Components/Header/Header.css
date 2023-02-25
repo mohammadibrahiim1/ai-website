@@ -1,5 +1,6 @@
 .header-title {
   font-size: 65px;
+  margin-top: 100px;
 }
 
 /* css style */
@@ -96,4 +97,26 @@ a:link {
 
 .mg-text {
   line-height: 14px;
+}
+
+
+@media screen and (max-width:576px) {
+
+  .header-title {
+    font-size: 42px;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .header-subtitle{
+    font-size:15px;
+  }
+
+  .search-input{
+    width: 100%;
+    /* margin: 0 auto; */
+    position: relative;
+    right: .5%;
+  }
+  
 }

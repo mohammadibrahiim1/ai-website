@@ -1,61 +1,88 @@
 .header-frame-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; 
-    padding: 15px 60px;
-  }
-  
-  .header-frame-1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-  }
-  .header-frame-1 small {
-    color: #292d32;
-    text-decoration: none;
-  }
-  
-  .navbar{
-    background-color: #fff;
-  }
-  .container-fluid{
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 15px 15px;
-  
-  }
-  
-  .form-control{
-    width: 438px;
-    height: 42px;
-  }
-  .nav-link{
-    color: #1F1F1F;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.5;
-    font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+}
 
-  }
-  .nav-link:hover{
-    color: #039BD2;
-  }
-  .dropdown-menu{
-    margin-left: 60px;
-  }
+.header-frame-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.header-frame-1 small {
+  color: #292d32;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #fff;
+}
+.container-fluid {
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 15px 15px;
+}
+
+.form-control {
+  width: 438px;
+  height: 42px;
+}
+.nav-link {
+  color: #1f1f1f;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+.nav-link:hover {
+  color: #039bd2;
+}
+.dropdown-menu {
+  margin-left: 60px;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.userImg {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin-right: 80px;
+}
+
+.userName {
+  font-size: 13px;
+}
+.offcanvas-login {
+  position: absolute;
+  bottom: 25%;
+  /* left: -8%; */
+}
+
+.offcanvas-social-link{
+  position: absolute;
+  top: 80%;
+  left: 7%;
   
-  .userImg{
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    margin-right: 80px;
-  }
-  
-  @media screen and (max-width:576px) {
-    
+}
+
+.link-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  gap: 20px;
+
+
+}
+
+@media screen and (max-width: 576px) {
   .header-frame-1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -63,14 +90,13 @@
     align-items: center;
     gap: 12px;
   }
-  
+
   .header-frame-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     gap: 20px;
     /* padding: 15px 60px; */
   }
-  }
-  
+}

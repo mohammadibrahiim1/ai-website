@@ -2,11 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Discover from "../Pages/Discover/Discover";
 import ProductDetails from "../Components/ProductDetails/ProductDetails";
 import SelectedProduct from "../Components/SelectedProduct/SelectedProduct";
-// import AiProduct from "../Components/AiProduct/AiProduct";
 import Favourites from "../Pages/Favourites/Favourites";
 import Home from "../Pages/Home/Home";
 import Root from "../Root/Root";
 import SignIn from "../Pages/SignIn/SignIn";
+import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
           fetch(`http://localhost:5000/allproducts/${params.category}`),
       },
 
-      { path: "/favourite", element: <Favourites></Favourites> },
+      { path: "/favourite", element: <PrivateRoute><Favourites></Favourites></PrivateRoute> },
       { path: "/discover", element: <Discover></Discover> },
       { path: "/signin", element: <SignIn></SignIn> },
     ],
