@@ -6,7 +6,7 @@ import "./FTools.css";
 import Tool from "../Tool/Tool";
 
 const FTools = () => {
-  const { cart,setCart } = useContext(AuthContext);
+  const { cart,handleRemoveProduct } = useContext(AuthContext);
   console.log(cart);
 
   // const {
@@ -19,20 +19,15 @@ const FTools = () => {
 
   //   } = cart;
 
-  const handleRemove = (_id)=> {
-
-    const array = cart.filter((item)=> item._id !== _id);
-    setCart(array);
-
-  }
+ 
 
   return (
-    <div>
-      {cart.length}favourite tools
+    <div className="container">
+     <p className="mt-4 ms-4 text-muted fs-5"> <span className="text-primary-emphasis"> {cart.length}</span> favourite tools</p>
       <div className="favourite-tool-container container">
         {cart.map((tool) => (
           <Tool tool={tool} key={tool._id} 
-          handleRemove={handleRemove}></Tool>
+          handleRemoveProduct={handleRemoveProduct}></Tool>
         ))}
       </div>
     </div>

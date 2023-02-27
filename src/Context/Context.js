@@ -8,9 +8,12 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-import { addToDb } from "../Utilities/StoredData";
 
 export const AuthContext = createContext();
+
+const cartFromlocalStorage = JSON.parse(
+  localStorage.getItem("newCart") || "[]"
+);
 
 const auth = getAuth(app);
 
@@ -18,41 +21,46 @@ const Context = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState();
   const [loading, setLoading] = useState(true);
-  const [cart, setCart] = useState([]);
-  const [warning, setWarning] = useState(false);
+  const [cart, setCart] = useState(cartFromlocalStorage);
+  // const [warning, setWarning] = useState(false);
+  console.log(cart);
 
   const handleAddtoFavourite = (product) => {
     console.log(product);
-
-    let isPresent = false;
-
-    cart.forEach((item) => {
-      if (product.id === item.id) isPresent = true;
-    });
-    if (isPresent) {
-      setWarning(true);
-      setTimeout(() => {
-        setWarning(false);
-      }, 2000);
-      return;
+    let newCart = [];
+    const exists = cart.find((item) => item._id === product._id);
+    if (!exists) {
+      product.quantity = 1;
+      newCart = [...cart, product];
+    } else {
+      const rest = cart.filter((item) => item._id !== product._id);
+      exists.quantity = exists.quantity + 1;
+      newCart = [...rest, exists];
     }
 
-    setCart([...cart, product]);
-    console.log(cart);
-    addToDb(product._id);
-    // let newTools = [];
-    // const exists = tools.find((ai) => ai._id !== item._id);
-    // if (!exists) {
-    //   item.quantity = 1;
-    //   newTools = [...tools, item];
-    // } else {
-    //   const rest = tools.filter((ai) => ai._id !== item._id);
-    //   exists.quantity = exists.quantity + 1;
-    //   newTools = [...rest, exists];
-    // }
+    setCart(newCart);
+    console.log(newCart);
+    localStorage.setItem("newCart", JSON.stringify(newCart));
+  };
 
-    // setTools(newTools);
-    // addToDb(item._id);
+  const removeFromDb = (_id) => {
+    const storedCart = localStorage.getItem("newCart");
+    if (storedCart) {
+      const newCart = JSON.parse(storedCart);
+      if (_id in newCart) {
+        delete newCart[_id];
+        localStorage.setItem("newCart", JSON.stringify(newCart));
+      }
+    }
+  };
+  
+
+  const handleRemoveProduct = (product) => {
+    console.log(product);
+
+  const rest = cart.filter( item => item._id !== product._id);
+  setCart(rest);
+  removeFromDb(product._id);
   };
 
   const signInWithGoogle = () => {
@@ -87,6 +95,7 @@ const Context = ({ children }) => {
     handleAddtoFavourite,
     cart,
     setCart,
+    handleRemoveProduct,
   };
 
   return (

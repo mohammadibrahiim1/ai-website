@@ -4,7 +4,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { BsBookmarkHeart } from "react-icons/bs";
 import './Tool.css'
 
-const Tool = ({tool,handleRemove}) => {
+const Tool = ({tool,handleRemoveProduct}) => {
     return (
         <div>
             <div class="card shadow mt-5" style={{ width: "22rem" }}>
@@ -57,7 +57,7 @@ const Tool = ({tool,handleRemove}) => {
           </Link>
           <tippy>
             <Link id="mytooltip" to="" class="btn btn-outline-info "
-             onClick={()=>handleRemove(tool._id)}
+             onClick={()=>handleRemoveProduct (tool)}
              >
               <BsBookmarkHeart 
                 className="ms-5 me-5 mb-1 text-center"
