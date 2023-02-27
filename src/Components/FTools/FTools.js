@@ -4,10 +4,11 @@ import { AuthContext } from "../../Context/Context";
 
 import "./FTools.css";
 import Tool from "../Tool/Tool";
+import NoTools from "../NoTools/NoTools";
 
 const FTools = () => {
   const { cart,handleRemoveProduct } = useContext(AuthContext);
-  console.log(cart);
+  // console.log(cart);
 
   // const {
   //     mainImage,
@@ -24,11 +25,15 @@ const FTools = () => {
   return (
     <div className="container">
      <p className="mt-4 ms-4 text-muted fs-5"> <span className="text-primary-emphasis"> {cart.length}</span> favourite tools</p>
-      <div className="favourite-tool-container container">
-        {cart.map((tool) => (
+      <div>
+
+      
+          {cart.length ? <div className="favourite-tool-container container">  {cart.map((tool) => (
           <Tool tool={tool} key={tool._id} 
           handleRemoveProduct={handleRemoveProduct}></Tool>
-        ))}
+        ))} </div> :  ( <NoTools></NoTools>)}
+       
+     
       </div>
     </div>
   );

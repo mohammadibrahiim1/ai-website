@@ -5,7 +5,7 @@ import "./ProductsDetails.css";
 
 const ProductDetails = () => {
   const proDetails = useLoaderData();
-  console.log(proDetails);
+  // console.log(proDetails);
 
   const {
     mainImage,
@@ -248,7 +248,7 @@ const ProductDetails = () => {
                         <ul>
                           <li class="message">
                             <img
-                              src="https://bootdey.com/img/Content/Link vatar/Link  vatar1.png"
+                              src="https://bootdey.com/img/Content/Link vatar/Link  vatar1.png" alt=""
                               class="online"
                             />
                             <span class="message-text">
@@ -285,7 +285,7 @@ const ProductDetails = () => {
                           </li>
                           <li class="message">
                             <img
-                              src="https://bootdey.com/img/Content/Link  vatar/Link  vatar2.png"
+                              src="https://bootdey.com/img/Content/Link  vatar/Link  vatar2.png" alt=""
                               class="online"
                             />
                             <span class="message-text">

@@ -1,10 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { BsBookmarkHeart } from "react-icons/bs";
+// import { BsBookmarkHeart } from "react-icons/bs";
+import { CiBookmarkRemove } from "react-icons/ci";
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/themes/light.css";
 import './Tool.css'
 
 const Tool = ({tool,handleRemoveProduct}) => {
+  tippy("#mytooltip", {
+    content: "visit website",
+    arrow: false,
+    placement: "bottom",
+    theme: "light-border",
+  });
+  tippy("#my-tooltip", {
+    content: "remove",
+    arrow: false,
+    placement: "bottom",
+    theme: "light-border",
+  });
     return (
         <div>
             <div class="card shadow mt-5" style={{ width: "22rem" }}>
@@ -43,7 +59,7 @@ const Tool = ({tool,handleRemoveProduct}) => {
           </div>
 
           <Link
-            id="my-tooltip"
+            id="mytooltip"
             to=""
             class="btn btn-info me-4 "
             data-bs-toggle="tooltip"
@@ -56,17 +72,18 @@ const Tool = ({tool,handleRemoveProduct}) => {
             />
           </Link>
           <tippy>
-            <Link id="mytooltip" to="" class="btn btn-outline-info "
-             onClick={()=>handleRemoveProduct (tool)}
+            <Link id="my-tooltip" to="" class="btn btn-outline-info "
+             onClick={()=>handleRemoveProduct (tool._id)}
              >
-              <BsBookmarkHeart 
-                className="ms-5 me-5 mb-1 text-center"
-                style={{ height: "15px", width: "15px" }}
+              <CiBookmarkRemove 
+                className="ms-5 me-5 mb-1 text-center "
+                style={{ height: "19px", width: "19px" }}
               />
             </Link>
           </tippy>
         </div>
       </div>
+      
         </div>
     );
 };

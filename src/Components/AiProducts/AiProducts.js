@@ -29,7 +29,7 @@ const AiProducts = () => {
     fetch("http://localhost:5000/categories")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setCategories(data);
       });
   }, []);
@@ -38,7 +38,7 @@ const AiProducts = () => {
     fetch("http://localhost:5000/allProducts")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setAllProducts(data);
         // setProjects(data);
       });
@@ -61,7 +61,7 @@ const AiProducts = () => {
   //   const updateItems = allProducts.filter((currentElement) => {
   //     return currentElement.category === categoryItem;
   //   });
-  //   // console.log("id");
+    // console.log("id");
   //   console.log(updateItems);
   //   setProjects(updateItems);
   // };

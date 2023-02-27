@@ -9,6 +9,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 
+
 export const AuthContext = createContext();
 
 const cartFromlocalStorage = JSON.parse(
@@ -23,10 +24,10 @@ const Context = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [cart, setCart] = useState(cartFromlocalStorage);
   // const [warning, setWarning] = useState(false);
-  console.log(cart);
+  // console.log(cart);
 
   const handleAddtoFavourite = (product) => {
-    console.log(product);
+    // console.log(product);
     let newCart = [];
     const exists = cart.find((item) => item._id === product._id);
     if (!exists) {
@@ -39,28 +40,37 @@ const Context = ({ children }) => {
     }
 
     setCart(newCart);
-    console.log(newCart);
+    // console.log(newCart);
+    // addToDb(product._id);
     localStorage.setItem("newCart", JSON.stringify(newCart));
   };
 
-  const removeFromDb = (_id) => {
-    const storedCart = localStorage.getItem("newCart");
-    if (storedCart) {
-      const newCart = JSON.parse(storedCart);
-      if (_id in newCart) {
-        delete newCart[_id];
-        localStorage.setItem("newCart", JSON.stringify(newCart));
-      }
-    }
-  };
-  
+  // const removeFromDb = (_id) => {
+  //   const storedCart = localStorage.getItem("newCart");
+  //   if (storedCart) {
+  //     const newCart = JSON.parse(storedCart);
+  //     if (_id in newCart) {
+  //       delete newCart[_id];
+  //       localStorage.setItem("newCart", JSON.stringify(newCart));
+  //     }
+  //   }
+  // };
 
-  const handleRemoveProduct = (product) => {
-    console.log(product);
+  const handleRemoveProduct = (_id) => {
+    // console.log(_id);
 
-  const rest = cart.filter( item => item._id !== product._id);
-  setCart(rest);
-  removeFromDb(product._id);
+    const updatedItems = [ ...cart];
+    updatedItems.splice(_id,1);
+    localStorage.setItem('newCart',JSON.stringify(updatedItems));
+    setCart(updatedItems);
+
+    // const rest = cart.filter((item) => {
+    //   return item._id !== _id;
+    // });
+    // setCart(rest);
+    // removeFromDb('newCart',_id);
+    // localStorage.removeItem("newCart", _id);
+    // console.log(_id);
   };
 
   const signInWithGoogle = () => {
@@ -77,7 +87,7 @@ const Context = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log(currentUser);
+      // console.log(currentUser);
       setUser(currentUser);
       setLoading(false);
     });

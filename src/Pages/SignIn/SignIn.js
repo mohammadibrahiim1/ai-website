@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import "./SignIn.css";
 import { AuthContext } from "../../Context/Context";
@@ -18,7 +18,7 @@ const SignIn = () => {
         setError("");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         setError(error.message);
       });
   };
@@ -43,6 +43,7 @@ const SignIn = () => {
             I'll also send a weekly newsletter with new AI tools and <br />{" "}
             updates. You can unsubscribe at any time.
           </p>
+          <p>{error}</p>
         </div>
       </section>
     </div>

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaLinkedin, FaYoutube, FaTwitter, FaDiscord } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
@@ -8,6 +8,7 @@ import { AuthContext } from "../../Context/Context";
 
 const Navbar = () => {
   const [error, setError] = useState();
+  console.log(error);
 //  const navigate = useNavigate();
 // const location = useLocation();
 // const from = location.state?.from?.pathname || "/"
@@ -24,7 +25,7 @@ const Navbar = () => {
      
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         setError(error.message);
       });
   };
@@ -164,41 +165,7 @@ const Navbar = () => {
             </div>
             <div className="d-sm-none d-lg-block d-md-block d-none">
               {user?.email ? (
-                // <div class=""
-                //   onClick={handleSignOut}
-                //   className="btn btn-light text-danger-emphasis nav-item dropdown"
-                // >
-                //   <span><img src={user.photoURL} alt="" style={{height:"25px",width:"25px"}} className="border rounded-circle" /></span>
-                //   {" "}
-                //   {/* <FiLogOut
-                //     className="me-3"
-                //     style={{ height: "25px", width: "25px" }}
-                //   /> */}
-                //   {user.displayName}
-                //   <li>
-                //   <Link
-                //     class="nav-link me-5 dropdown-toggle"
-                //     to="/about"
-                //     role="button"
-                //     data-bs-toggle="dropdown"
-                //     aria-expanded="false"
-                //   >
-                //     Submit
-                //   </Link>
-                //   <ul class="dropdown-menu">
-                //     <li>
-                //       <Link class="dropdown-item" to="#">
-                //         Submit Tool
-                //       </Link>
-                //     </li>
-                //     <li>
-                //       <Link class="dropdown-item" to="#">
-                //         Submit News
-                //       </Link>
-                //     </li>
-                //   </ul>
-                // </li>
-                // </div>
+                
 
                 <div className="ms-5">
                   <div class="nav-item dropdown">
@@ -251,9 +218,7 @@ const Navbar = () => {
                       />
                       Login
                     </button>
-                    {/* <span className="me-3">
-              <FcGoogle style={{height:"25px", width:"25px"}}/>
-            </span> */}
+            
                   </div>
                 </>
               )}

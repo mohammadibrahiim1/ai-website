@@ -9,7 +9,6 @@ import "tippy.js/themes/light.css";
 import "./AiProduct.css";
 
 const AiProduct = ({ product,handleAddtoFavourite}) => {
-  // console.log(handleAddtoFavourite);
   tippy("#mytooltip", {
     content: "add to favourite",
     arrow: false,

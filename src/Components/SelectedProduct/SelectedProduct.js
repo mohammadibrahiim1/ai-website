@@ -7,13 +7,13 @@ const SelectedProduct = () => {
     const [categories, setCategories] = useState([]);
 
     const selecItem = useLoaderData();
-    console.log(selecItem);
+    // console.log(selecItem);
 
     useEffect(() => {
         fetch("http://localhost:5000/categories")
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
             setCategories(data);
           });
       }, []);

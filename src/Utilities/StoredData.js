@@ -1,51 +1,51 @@
-const addToDb = (cart) => {
-  let shoppingCart = {};
+const addToDb = (_id) => {
+  let toolsCart = {};
 
-  const storedCart = localStorage.getItem("shopping-cart");
+  const storedCart = localStorage.getItem("tools-cart");
   if (storedCart) {
-    shoppingCart = JSON.parse(storedCart);
+    toolsCart = JSON.parse(storedCart);
   }
 
   // add quantity
 
-  // const quantity = shoppingCart[_id];
-  // if (quantity) {
-  //   const newQuantity = quantity + 1;
-  //   shoppingCart[_id] = newQuantity;
-  // } else {
-  //   shoppingCart[_id] = 1;
-  // }
+  const quantity = toolsCart[_id];
+  if (quantity) {
+    const newQuantity = quantity + 1;
+    toolsCart[_id] = newQuantity;
+  } else {
+    toolsCart[_id] = 1;
+  }
 
-  localStorage.setItem("shopping-cart", JSON.stringify(shoppingCart));
+  localStorage.setItem("tools-cart", JSON.stringify(toolsCart));
 };
 
 const getStoredCart = () => {
-  let shoppingCart = {};
+  let toolsCart = {};
   // get the shopping cart from local storage
-  const storedCart = localStorage.getItem("shopping-cart");
+  const storedCart = localStorage.getItem("tools-cart");
   if (storedCart) {
-    shoppingCart = JSON.parse(storedCart);
+    toolsCart = JSON.parse(storedCart);
   }
-  return shoppingCart;
+  return toolsCart;
 };
 
 const removeFromDb = (_id)=> {
   
 
-    const storedCart = localStorage.getItem('shopping-cart');
+    const storedCart = localStorage.getItem('tools-cart');
     if(storedCart){
-  const shoppingCart = JSON.parse(storedCart);
-  if(_id in shoppingCart){
-    delete shoppingCart[_id];
-    localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart))
+  const toolsCart = JSON.parse(storedCart);
+  if(_id in toolsCart){
+    delete toolsCart[_id];
+    localStorage.setItem('tools-cart', JSON.stringify(toolsCart))
   }
     }
 }
 
-const deletedShoppingCart = ()=> {
-    localStorage.removeItem('shopping-cart')
+const deletedtoolsCart = ()=> {
+    localStorage.removeItem('tools-cart')
 }
 
 export {
-    addToDb, getStoredCart, removeFromDb,deletedShoppingCart
+    addToDb, getStoredCart, removeFromDb,deletedtoolsCart
 }
