@@ -8,21 +8,20 @@ import { AuthContext } from "../../Context/Context";
 
 const Navbar = () => {
   const [error, setError] = useState();
-  const Navigate = useNavigate();
-
+//  const navigate = useNavigate();
+// const location = useLocation();
+// const from = location.state?.from?.pathname || "/"
   const { signInWithGoogle, user, logOut } = useContext(AuthContext);
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
+  // const { handleAddtoFavourite } = useContext(AuthContext);
+
+
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
         const user = result.user;
         console.log(user);
-        // Navigate("/favourite");
-        Navigate(from, { replace: true });
-        // from.reset();
-        setError("");
+     
       })
       .catch((error) => {
         console.log(error);
@@ -34,7 +33,7 @@ const Navbar = () => {
     logOut()
       .then(() => {})
       .catch((error) => console.error(error));
-    Navigate("/signin");
+    // navigate("/favourite/singin");
   };
 
   return (
@@ -93,7 +92,7 @@ const Navbar = () => {
                     aria-current="page"
                     to="/favourite"
                   >
-                    Favourites
+                    Favourites 
                   </Link>
                 </li>
                 <li class="nav-item">
@@ -243,7 +242,7 @@ const Navbar = () => {
               ) : (
                 <>
                   {" "}
-                  <Link to="/signin">
+                  <div>
                     {" "}
                     <button class="btn btn-light" onClick={handleGoogleSignIn}>
                       <FcGoogle
@@ -255,7 +254,7 @@ const Navbar = () => {
                     {/* <span className="me-3">
               <FcGoogle style={{height:"25px", width:"25px"}}/>
             </span> */}
-                  </Link>
+                  </div>
                 </>
               )}
             </div>
@@ -455,7 +454,7 @@ const Navbar = () => {
                     <div className="">
                       <Link
                         class="text-danger-emphasis btn btn-light"
-                        to="#"
+                        to=""
                         onClick={handleSignOut}
                       >
                         <span>

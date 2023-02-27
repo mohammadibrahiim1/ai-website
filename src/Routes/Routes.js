@@ -1,13 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
-import Discover from "../Pages/Discover/Discover";
+// import Discover from "../Pages/Discover/Discover";
 import ProductDetails from "../Components/ProductDetails/ProductDetails";
 import SelectedProduct from "../Components/SelectedProduct/SelectedProduct";
-import Favourites from "../Pages/Favourites/Favourites";
+// import Favourites from "../Pages/Favourites/Favourites";
 import Home from "../Pages/Home/Home";
-import Root from "../Root/Root";
-import SignIn from "../Pages/SignIn/SignIn";
-import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
-import Recent from "../Components/Recent/Recent";
+// import Root from "../Root/Root";
+import Root from "../Layout/Root/Root";
+// import SignIn from "../Pages/SignIn/SignIn";
+// import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
+// import Recent from "../Components/Recent/Recent";
+// import Tools from "../Pages/Tools/Tools";
+// import { BsTools } from "react-icons/bs";
+import FavouriteLayout from "../Layout/Root/FavouriteLayout/FavouriteLayout";
+import FTools from "../Components/FTools/FTools";
+// import News from "../Components/News/News";
+import Newes from "../Components/Newes/Newes";
 
 export const router = createBrowserRouter([
   {
@@ -29,11 +36,25 @@ export const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/allproducts/${params.category}`),
       },
+    ],
+  },
 
-      { path: "/favourite", element: <PrivateRoute><Favourites></Favourites></PrivateRoute> },
-      { path: "/discover", element: <Discover></Discover> },
-      { path: "/signin", element: <SignIn></SignIn> },
-      { path: "/recent", element: <Recent></Recent> },
+  {
+    path: "/favourite",
+    element: <FavouriteLayout></FavouriteLayout>,
+    children: [
+      {
+        path: "/favourite",
+        element: <FTools></FTools>,
+      },
+      {
+        path: "/favourite/apps",
+        element: <FTools></FTools>,
+      },
+      {
+        path: "/favourite/news",
+        element: <Newes></Newes>,
+      },
     ],
   },
 ]);

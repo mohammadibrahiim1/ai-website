@@ -1,0 +1,12 @@
+.fheader-title {
+  font-size: 38px;
+  font-weight: 400;
+  color: rgb(65, 64, 64);
+}
+
+.fheader-subtitle{
+    font-size: 18px;
+    color: gray;
+    font-weight: 600px;
+    text-transform: capitalize;
+}

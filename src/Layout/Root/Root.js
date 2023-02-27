@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Outlet } from 'react-router-dom';
-import Footer from '../Shared/Footer/Footer';
-import Navbar from '../Shared/Navbar/Navbar';
+// import { AuthContext } from '../../Context/Context';
+import Footer from '../../Shared/Footer/Footer';
+import Navbar from '../../Shared/Navbar/Navbar';
 
 const Root = () => {
+ 
     return (
         <div>
             <Navbar></Navbar>

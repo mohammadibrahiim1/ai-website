@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+// import Slider from 'react-touch-drag-slider'
 // import { useContext } from "react";
 
 // import { ProductContext } from "../../Context/Context";
 import AiProduct from "../AiProduct/AiProduct";
 import "./AiProducts.css";
 // import { data } from "./aiProductsData";
-import { HiFilter } from "react-icons/hi";
-import { FiUnlock, FiDollarSign } from "react-icons/fi";
+// import { HiFilter } from "react-icons/hi";
+// import { FiUnlock, FiDollarSign } from "react-icons/fi";
 
-import { SlBadge } from "react-icons/sl";
-import { MdFiberNew } from "react-icons/md";
-import { FaTag } from "react-icons/fa";
-import { GoVerified } from "react-icons/go";
+// import { SlBadge } from "react-icons/sl";
+// import { MdFiberNew } from "react-icons/md";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// import { GoVerified } from "react-icons/go";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/Context";
 
 const AiProducts = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -21,6 +23,7 @@ const AiProducts = () => {
   // const [isChecked, setIsChecked] = useState(false);
 
   const [categories, setCategories] = useState([]);
+  const { handleAddtoFavourite } = useContext(AuthContext);
 
   useEffect(() => {
     fetch("http://localhost:5000/categories")
@@ -40,6 +43,8 @@ const AiProducts = () => {
         // setProjects(data);
       });
   }, []);
+
+  
 
   // const handleChange = (props) => {
   //   setIsChecked(!isChecked);
@@ -70,10 +75,11 @@ const AiProducts = () => {
 
   return (
     <div>
-      <section className="categories-section container text-center">
+      <section className="categories-section container wrapper  text-center">
         {/* <div>{categories.length}</div> */}
+        <FaArrowLeft />
         {categories.map((category) => (
-          <span className=" btn btn-light">
+          <span className="  btn btn-light border rounded-pill me-2">
             <Link
               //  onClick={()=>filterItem(category.name)}
               to={`/category/${category.name}`}
@@ -82,7 +88,7 @@ const AiProducts = () => {
             </Link>
           </span>
         ))}
-
+        <FaArrowRight />
         {/* <div>
 <div className="slider">
       <input
@@ -94,11 +100,30 @@ const AiProducts = () => {
       <label htmlFor={props.id}></label>
 </div>
 </div> */}
+
+        {/* <Slider
+      onSlideComplete={(i) => {
+        console.log('finished dragging, current slide is', i)
+      }}
+      onSlideStart={(i) => {
+        console.log('started dragging on slide', i)
+      }}
+      activeIndex={0}
+      threshHold={100}
+      transition={0.5}
+      scaleOnDrag={true}
+    >
+      {categories.map(({ url, title }, index) => (
+        <img src={url} key={index} alt={title} />
+      ))}
+    </Slider> */}
       </section>
 
       <div className="card-container container">
-        {allProducts.map((ai) => (
-          <AiProduct ai={ai} id={ai.index}></AiProduct>
+        {allProducts.map((product) => (
+          <AiProduct product={product} id={product.index}
+          handleAddtoFavourite={handleAddtoFavourite}
+          ></AiProduct>
         ))}
       </div>
     </div>

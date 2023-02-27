@@ -54,6 +54,13 @@
   font-size: 17px;
 }
 
+.wrapper{
+  max-width: 900px;
+ overflow-x: hidden;
+ position: relative;
+
+}
+
 @media screen and (max-width: 576px) {
   .card-container {
     display: grid;
